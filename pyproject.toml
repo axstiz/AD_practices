@@ -1,0 +1,59 @@
+[project]
+name = "ml_lab"
+version = "0.1.0"
+description = ""
+readme = "README.md"
+requires-python = ">=3.13,<3.14"
+dependencies = [
+    "ddgs>=9.9.3",
+    "dotenv>=0.9.9",
+    "ffmpeg-python>=0.2.0",
+    "gigachat>=0.1.43",
+    "gradio>=6.2.0",
+    "ipython>=9.5.0",
+    "isort>=6.0.1",
+    "jupyter>=1.1.1",
+    "langchain>=0.3.27",
+    "matplotlib>=3.10.6",
+    "notebook>=7.4.5",
+    "numpy>=2.3.3",
+    "pandas>=2.3.2",
+    "pip>=25.2",
+    "pydantic-settings>=2.12.0",
+    "python-dotenv>=1.2.1",
+    "ruff>=0.14.0",
+    "scikit-learn>=1.7.2",
+    "scipy>=1.16.2",
+    "setuptools>=80.9.0",
+]
+
+
+[tool.ruff]
+target-version = "py313"
+line-length = 70
+indent-width = 4
+exclude = [
+    ".git/",
+    "venv/",
+    ".venv/",
+    "vscode/",
+    "__pycache__/",
+    ".ruff_cache/",
+]
+
+
+[tool.ruff.lint]
+dummy-variable-rgx = "^(_+|(_+[a-zA-Z0-9_]*[a-zA-Z0-9]+?))$"
+
+select = ["E", "F", "N", "I", "C90", "T", "S"]
+ignore = ["N803", "T201"]
+
+fixable = ["ALL"]
+unfixable = []
+
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+skip-magic-trailing-comma = false
+line-ending = "auto"
